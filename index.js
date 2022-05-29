@@ -18,6 +18,11 @@ function getLottoNumbers(start,end,count=6,special=true){
        }
     }while(numbers.length<count);
 
+    //排序
+    console.log(numbers.sort((a,b)=>{
+        return a-b;
+    }));
+
     //for (let i=0; i<count;i++){
         //while (true){
             //let number =getRandInt(start,end);
@@ -34,8 +39,9 @@ function getLottoNumbers(start,end,count=6,special=true){
     }
     return numbers;
 }
-let count=10;
+let count=prompt("請輸入筆數：");
 let ulStr="<h3>樂透號碼</h3><ul>";
+
 for (let i=0; i<count; i++){
     let lotto=getLottoNumbers(1,49);
     console.log(lotto);
