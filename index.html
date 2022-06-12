@@ -1,13 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <body>
-    <h1>JavaScript</h1>
-    <script src="./index.js"></script>
-  </body>
+    <style>
+        .date {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="date"></p>
+    <h1 style="padding: 12px;">大樂透號碼</h1>
+    <h3>開獎日期:<span class="date"></span></h3>
+    <div class="lotto-number">
+        <p>
+        <ul>
+            <li>開獎中.....</li>
+        </ul>
+        </p>
+    </div>
+    <button id="start" type="button" onclick="geneLotto()">開始</button>
+    <script src="./js/index.js"></script>
+    <script>
+        //console.log(document.querySelector("span.date"));
+        //document.querySelector("h3 span.date").innerText = "2022/6/12";
+        const dateEl = document.querySelectorAll(".date");
+        console.log(dateEl);
+        dateEl.forEach(date => {
+            date.innerText = "2022/6/12";
+        });
+        dateEl[0].innerHTML = new Date();
+    </script>
+</body>
+
 </html>
